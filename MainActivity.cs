@@ -12,6 +12,7 @@ namespace LielProject
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
+        // Comment to check GitHub
         Button btnLogin, btnRegister, btnLeaderboard;
         protected override void OnCreate(Bundle savedInstanceState)
         {

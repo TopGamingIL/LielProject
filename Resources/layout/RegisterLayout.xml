@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#0f0f10"
+   >
+    <TextView
+        android:text="Register"
+        android:textColor="#ffffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+       />
+    <EditText
+        android:layout_width="200dp"
+        android:textColorHint="#f0f0f0"
+        android:layout_height="wrap_content"
+        android:id="@+id/etRegFullName"
+        android:hint="Full Name"
+       />
+    <EditText
+        android:layout_width="200dp"
+        android:textColorHint="#f0f0f0"
+        android:layout_height="wrap_content"
+        android:id="@+id/etRegUsername"
+        android:hint="Username"
+       />
+    <EditText
+        android:textColorHint="#f0f0f0"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/etRegEmail"
+        android:hint="Email"
+       />
+    <EditText
+        android:color="#ffffff"
+        android:textColorHint="#ffffff"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/etRegPassword"
+        android:hint="Password"
+       />
+    <Button
+        android:textColor="#ffffff"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnRegister"
+        android:text="Enter"
+       />
+</LinearLayout>

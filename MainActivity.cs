@@ -13,7 +13,7 @@ namespace LielProject
     public class MainActivity : AppCompatActivity
     {
         // Comment to check GitHub
-        Button btnLogin, btnRegister, btnLeaderboard;
+        Button btnLogin, btnRegister;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -26,18 +26,11 @@ namespace LielProject
         private void InitViews() {
             btnLogin = FindViewById<Button>(Resource.Id.btnLogin);
             btnRegister = FindViewById<Button>(Resource.Id.btnRegister);
-            btnLeaderboard = FindViewById<Button>(Resource.Id.btnLeaderboard);
 
             btnLogin.Click += BtnLogin_Click;
             btnRegister.Click += BtnRegister_Click;
-            btnLeaderboard.Click += BtnLeaderboard_Click;
         }
 
-        private void BtnLeaderboard_Click(object sender, EventArgs e)
-        {
-            Intent intent = new Intent(this, typeof(LeaderboardActivity));
-            StartActivity(intent);
-        }
 
         private void BtnRegister_Click(object sender, EventArgs e)
         {

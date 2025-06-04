@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#006400"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp">
+
+	<!-- Dealer Section -->
+	<TextView
+        android:text="Dealer"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+	<HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+		<LinearLayout
+            android:id="@+id/dealerCardsLayout"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+	</HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/dealerHandValue"
+        android:text="0"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+	<!-- Player Section -->
+	<TextView
+        android:text="Player"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_gravity="center" />
+
+	<HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+		<LinearLayout
+            android:id="@+id/playerCardsLayout"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+	</HorizontalScrollView>
+    
+    <TextView
+        android:id="@+id/playerHandValue"
+        android:text="0"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+	<!-- Buttons -->
+	<LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:layout_marginTop="32dp"
+        android:weightSum="3"
+        android:paddingTop="8dp">
+
+		<Button
+            android:id="@+id/btnHit"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:text="Hit" />
+
+		<Button
+            android:id="@+id/btnStand"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:text="Stand" />
+
+		<Button
+            android:id="@+id/btnDouble"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:text="Double Down" />
+	</LinearLayout>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="2">
+            
+            <TextView
+                android:id="@+id/tvChips"
+                android:text="0"
+                android:textAlignment="center"
+                android:width="30sp"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+            <TextView
+                android:id="@+id/tvBet"
+                android:text="0"
+                android:textAlignment="center"
+                android:width="30sp"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+    </LinearLayout>
+
+    <Button
+            android:id="@+id/btnPlayAgain"
+            android:layout_marginTop="32dp"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:text="Play Again" />
+</LinearLayout>

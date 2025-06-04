@@ -63,8 +63,8 @@ namespace LielProject.Activities
                 // initialize password input box
                 etPassword.Text = "";
 
-                // go to ProfileActivity after login
-                Intent intent = new Intent(this, typeof(ProfileActivity));
+                // go to LoggedInActivity after login
+                Intent intent = new Intent(this, typeof(LoggedInActivity));
                 intent.PutExtra("uid", uid);
                 StartActivity(intent);
             }

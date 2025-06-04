@@ -18,7 +18,7 @@ namespace LielProject.Helpers
         public const string KEY_FULLNAME = "FullName";
         public const string KEY_USERNAME = "Username";
         public const string KEY_EMAIL = "Email";
-        public const string KEY_COINS = "Coins";
+        public const string KEY_CHIPS = "Chips";
         public const string KEY_PASSWORD = "Password";
         public const string KEY_URL = "ImageURL";
     }

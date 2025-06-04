@@ -6,7 +6,7 @@
     android:padding="10dp"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="#0f0f10"
+    android:background="#006400"
    >
     <TextView
         android:text="Register"

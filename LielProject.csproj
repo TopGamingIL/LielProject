@@ -65,7 +65,10 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activities\BetActivity.cs" />
+    <Compile Include="Activities\GameActivity.cs" />
     <Compile Include="Activities\HomePage.cs" />
+    <Compile Include="Activities\LoggedInActivity.cs" />
     <Compile Include="Activities\LoginActivity.cs" />
     <Compile Include="Activities\LeaderboardActivity.cs" />
     <Compile Include="Activities\ProfileActivity.cs" />
@@ -74,6 +77,8 @@
     <Compile Include="Helpers\General.cs" />
     <Compile Include="Helpers\PlayerAdapter.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Model\Card.cs" />
+    <Compile Include="Model\Deck.cs" />
     <Compile Include="Model\Player.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,9 +90,6 @@
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\activity_main.xml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
     <AndroidResource Include="Resources\values\colors.xml" />
     <AndroidResource Include="Resources\values\ic_launcher_background.xml" />
     <AndroidResource Include="Resources\values\strings.xml" />
@@ -111,7 +113,7 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\drawable\" />
+    <AndroidResource Include="Resources\drawable\_back.png" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.2.0.5" />
@@ -148,6 +150,81 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\ProfileLayout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\GameLayout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\_tc.png" />
+    <AndroidResource Include="Resources\drawable\_td.png" />
+    <AndroidResource Include="Resources\drawable\_th.png" />
+    <AndroidResource Include="Resources\drawable\_ts.png" />
+    <AndroidResource Include="Resources\drawable\_2c.png" />
+    <AndroidResource Include="Resources\drawable\_2d.png" />
+    <AndroidResource Include="Resources\drawable\_2h.png" />
+    <AndroidResource Include="Resources\drawable\_2s.png" />
+    <AndroidResource Include="Resources\drawable\_3c.png" />
+    <AndroidResource Include="Resources\drawable\_3d.png" />
+    <AndroidResource Include="Resources\drawable\_3h.png" />
+    <AndroidResource Include="Resources\drawable\_3s.png" />
+    <AndroidResource Include="Resources\drawable\_4c.png" />
+    <AndroidResource Include="Resources\drawable\_4d.png" />
+    <AndroidResource Include="Resources\drawable\_4h.png" />
+    <AndroidResource Include="Resources\drawable\_4s.png" />
+    <AndroidResource Include="Resources\drawable\_5c.png" />
+    <AndroidResource Include="Resources\drawable\_5d.png" />
+    <AndroidResource Include="Resources\drawable\_5h.png" />
+    <AndroidResource Include="Resources\drawable\_5s.png" />
+    <AndroidResource Include="Resources\drawable\_6c.png" />
+    <AndroidResource Include="Resources\drawable\_6d.png" />
+    <AndroidResource Include="Resources\drawable\_6h.png" />
+    <AndroidResource Include="Resources\drawable\_6s.png" />
+    <AndroidResource Include="Resources\drawable\_7c.png" />
+    <AndroidResource Include="Resources\drawable\_7d.png" />
+    <AndroidResource Include="Resources\drawable\_7h.png" />
+    <AndroidResource Include="Resources\drawable\_7s.png" />
+    <AndroidResource Include="Resources\drawable\_8c.png" />
+    <AndroidResource Include="Resources\drawable\_8d.png" />
+    <AndroidResource Include="Resources\drawable\_8h.png" />
+    <AndroidResource Include="Resources\drawable\_8s.png" />
+    <AndroidResource Include="Resources\drawable\_9c.png" />
+    <AndroidResource Include="Resources\drawable\_9d.png" />
+    <AndroidResource Include="Resources\drawable\_9h.png" />
+    <AndroidResource Include="Resources\drawable\_9s.png" />
+    <AndroidResource Include="Resources\drawable\_ac.png" />
+    <AndroidResource Include="Resources\drawable\_ad.png" />
+    <AndroidResource Include="Resources\drawable\_ah.png" />
+    <AndroidResource Include="Resources\drawable\_as.png" />
+    <AndroidResource Include="Resources\drawable\_jc.png" />
+    <AndroidResource Include="Resources\drawable\_jd.png" />
+    <AndroidResource Include="Resources\drawable\_jh.png" />
+    <AndroidResource Include="Resources\drawable\_js.png" />
+    <AndroidResource Include="Resources\drawable\_kc.png" />
+    <AndroidResource Include="Resources\drawable\_kd.png" />
+    <AndroidResource Include="Resources\drawable\_kh.png" />
+    <AndroidResource Include="Resources\drawable\_ks.png" />
+    <AndroidResource Include="Resources\drawable\_qc.png" />
+    <AndroidResource Include="Resources\drawable\_qd.png" />
+    <AndroidResource Include="Resources\drawable\_qh.png" />
+    <AndroidResource Include="Resources\drawable\_qs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_main.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\BetLayout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\LoggedIdLayout.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

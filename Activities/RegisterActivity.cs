@@ -25,8 +25,6 @@ namespace LielProject.Activities
         Button btnRegister;
         FirebaseData fbd;
         Player player;
-        HashMap hm;
-        string uid;
         public static string id;
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -60,7 +58,7 @@ namespace LielProject.Activities
         }
 
         private async void SaveDocument() {
-            if (await Register(etRegFullName.Text, etRegUsername.Text, etRegEmail.Text, etRegPassword.Text)) {
+            if (await Register(etRegFullName.Text, etRegUsername.Text, etRegEmail.Text, etRegPassword.Text, "2500")) {
                 Toast.MakeText(this, "Registered Successfully", ToastLength.Short).Show();
                 etRegUsername.Text = "";
                 etRegFullName.Text = "";
@@ -73,7 +71,7 @@ namespace LielProject.Activities
             }
         }
 
-        private async Task<bool> Register(string fullName, string username, string email, string password)
+        private async Task<bool> Register(string fullName, string username, string email, string password, string chips)
         {
             try
             {
@@ -84,12 +82,14 @@ namespace LielProject.Activities
                 userMap.Put(General.KEY_EMAIL, email);
                 userMap.Put(General.KEY_USERNAME, username);
                 userMap.Put(General.KEY_PASSWORD, password);
+                userMap.Put(General.KEY_CHIPS, chips);
                 userMap.Put(General.KEY_ID, fbd.auth.CurrentUser.Uid);
                 DocumentReference userReference = fbd.firestore.Collection(General.FS_COLLECTION).Document(fbd.auth.CurrentUser.Uid);
                 await userReference.Set(userMap);
             }
             catch (Exception e)
             {
+                Console.WriteLine(e);
                 return false;
             }
             return true;

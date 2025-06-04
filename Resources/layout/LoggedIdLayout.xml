@@ -9,7 +9,7 @@
     android:minHeight="25px"
     android:background="#006400">
     <TextView
-        android:text="Blackjack"
+        android:text="Welcome,"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="50sp"
@@ -19,22 +19,20 @@
         android:id="@+id/textView1" />
 
     <Button
-        android:text="Login"
+        android:text="Leaderboard"
         android:layout_width="200sp"
         android:layout_height="wrap_content"
         android:textSize="20sp"
         android:padding="20sp"
         android:layout_gravity="center"
-        android:textColor="#f0f0f0"
-        
-        android:id="@+id/btnLogin" />
+        android:id="@+id/btnLeaderboard" />
     <Button
-        android:text="Register"
+        android:text="Play"
         android:layout_width="200sp"
         android:layout_height="wrap_content"
         android:textSize="20sp"
         android:padding="20sp"
         android:layout_gravity="center"
-        android:id="@+id/btnRegister" />
+        android:id="@+id/btnPlay" />
 
 </LinearLayout>

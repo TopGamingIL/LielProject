@@ -56,7 +56,7 @@ namespace LielProject.Activities
         public void OnSuccess(Java.Lang.Object result)
         {
             var snapshot = (DocumentSnapshot)result;
-            player = new Player(snapshot.Id, snapshot.Get(General.KEY_FULLNAME).ToString(), snapshot.Get(General.KEY_USERNAME).ToString(), snapshot.Get(General.KEY_EMAIL).ToString(), (int)snapshot.Get(General.KEY_COINS), snapshot.Get(General.KEY_PASSWORD).ToString());
+            player = new Player(snapshot.Id, snapshot.Get(General.KEY_FULLNAME).ToString(), snapshot.Get(General.KEY_USERNAME).ToString(), snapshot.Get(General.KEY_EMAIL).ToString(), (double)snapshot.Get(General.KEY_CHIPS), snapshot.Get(General.KEY_PASSWORD).ToString());
             PrintPlayer(player);
         }
 
@@ -64,7 +64,7 @@ namespace LielProject.Activities
         {
             profileUsernameEt.Text = player.Username;
             profileNameEt.Text = player.FullName;
-            profileCoinsEt.Text = player.Coins.ToString();
+            profileCoinsEt.Text = player.Chips.ToString();
         }
 
         public void OnEvent(Java.Lang.Object obj, FirebaseFirestoreException error)

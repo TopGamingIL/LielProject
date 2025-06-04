@@ -25,7 +25,6 @@
         android:textSize="20sp"
         android:padding="20sp"
         android:layout_gravity="center"
-        android:backgroundTint="#0f0f0f"
         android:textColor="#f0f0f0"
         
         android:id="@+id/btnLogin" />
